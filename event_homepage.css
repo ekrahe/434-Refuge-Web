@@ -1,14 +1,16 @@
 body{
 	background-color:#00BCD4;
 }
-#header{
+.header{
 	color:white;
 	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
 	margin-left: 50%;
 	font-weight: normal;
 }
-#cal{
+.cal{
 	margin-left: 20%;
+	margin-right:20%;
+	position: fixed;
 	
 }
 .sidebar{
@@ -18,4 +20,9 @@ body{
    left: 0px;
    /*top: 300px;*/
    border-right: 2px solid white;
+   border-color: #FF8A80;
+}
+.event_creator{
+	margin-left: 90%;
+	position: fixed;
 }
