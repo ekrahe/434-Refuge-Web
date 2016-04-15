@@ -1,3 +1,21 @@
 body{
-	background-color:black;
+	background-color:#00BCD4;
+}
+#header{
+	color:white;
+	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
+	margin-left: 50%;
+	font-weight: normal;
+}
+#cal{
+	margin-left: 20%;
+	
+}
+.sidebar{
+   width: 20%;
+   height: 100%;
+   position: fixed;
+   left: 0px;
+   /*top: 300px;*/
+   border-right: 2px solid white;
 }
