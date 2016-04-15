@@ -1,16 +1,20 @@
 body{
 	background-color:#00BCD4;
+	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
+	font-weight: normal;
+	color:white;
 }
 .header{
-	color:white;
-	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
 	margin-left: 50%;
 	font-weight: normal;
+
 }
 .cal{
 	margin-left: 20%;
 	margin-right:20%;
 	position: fixed;
+	width: 	0%; /*55%*/
+	height: 0%; /*90%*/
 	
 }
 .sidebar{
@@ -21,8 +25,13 @@ body{
    /*top: 300px;*/
    border-right: 2px solid white;
    border-color: #FF8A80;
+
 }
 .event_creator{
-	margin-left: 90%;
+	margin-left: 20%; /*85%*/
 	position: fixed;
+
+}
+.events_header{
+	font-weight: normal;
 }
