@@ -1,0 +1,28 @@
+body{
+	font-family: Verdana !important;
+	background: #00BCD4 !important;
+}
+
+.form_color{
+	background:white !important;
+}
+.margin-top-20 { margin-top: 2.0em; }
+.overall-border { 
+	margin-top: 70px;
+	border-style: solid;
+	padding: 20px;
+}
+
+.btn-circle {
+  width:50px;
+  height: 34px;
+  text-align: center;
+  
+  font-size: 30px;
+  line-height: 40x;
+  border-radius: 50%;
+}
+
+.btne:active{
+	color:green;
+}
