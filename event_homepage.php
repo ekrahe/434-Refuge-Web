@@ -8,7 +8,7 @@ define('CLIENT_SECRET_PATH', __DIR__ . '/client_secret.json');
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/calendar-php-quickstart.json
 define('SCOPES', implode(' ', array(
-  Google_Service_Calendar::CALENDAR)
+ Google_Service_Calendar::CALENDAR)
 ));
 
 
@@ -24,6 +24,12 @@ echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?src
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header"><u> Events </u> </h3>';
+echo '</div>';
+
+
+
+
+////////////////////////
 
 $client = getClient();
 
@@ -32,10 +38,8 @@ $service= new Google_Service_Calendar($client);
 
 
 
-$calendar= $service->calendars->get('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com');
-echo $calendar->getSummary();
 
-$events = $service->events->listEvents('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com');
+$events = $service->events->listEvents('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com'); //long string is calandarID
 
 while(true) {
   foreach ($events->getItems() as $event) {
@@ -51,7 +55,7 @@ while(true) {
 }
 
 
-echo '</div>';
+
 	
 
 function getClient() {
@@ -64,7 +68,7 @@ function getClient() {
   $client->setScopes(SCOPES);
   $client->setAuthConfigFile(CLIENT_SECRET_PATH);
   $client->setAccessType('offline');
-  $client->setDeveloperKey('AIzaSyBXmWg-rhhg61IDkj5u6BT7ME1APbHe8-g');
+  $client->setDeveloperKey('AIzaSyBXmWg-rhhg61IDkj5u6BT7ME1APbHe8-g'); //key API
   //$client->setAuthConfigFile('client_secrets.json');
 
   $client->setRedirectUri('//' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
@@ -84,7 +88,7 @@ function getClient() {
     //$accessToken = $client->authenticate('4/2LVocn1mAVoJH-24BWH0nk8_d5_J0d8K79RlZjzLozg');
     //$accessToken='4/2LVocn1mAVoJH-24BWH0nk8_d5_J0d8K79RlZjzLozg';
     // Store the credentials to disk.
-  	$accessToken = $client->authenticate('4/2LVocn1mAVoJH-24BWH0nk8_d5_J0d8K79RlZjzLozg');
+  	$accessToken = $client->authenticate('4/2LVocn1mAVoJH-24BWH0nk8_d5_J0d8K79RlZjzLozg'); //JSON token
 
     // Store the credentials to disk.
     if(!file_exists(dirname($credentialsPath))) {
