@@ -1,34 +1,198 @@
-    <!DOCTYPE html>
-    <html lang="en">
-     <head>
-     <!--Required meta tags always come first -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta http-equiv="x-ua-compatible" content="ie=edge">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--Required meta tags always come first -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-     <!--Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">    
-     </head>
-    <body style="font-family:Verdana">
-          
-        <div class="container-fluid">
-          <h1> Create Event</h1>
-          <div class="row">
-              <div class="col-sm-4">1 of three
-              </div>
-              <div class="col-sm-4">1 of three
-              </div>
-              <div class="col-sm-4">1 of three
-              </div>
-          </div>
-          
-            
-        </div>
-          
-           
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-    </body>
-    
-    </html>
+
+		<link rel="stylesheet" type="text/css" href="Create_page/create_page.css" >
+		<!--Bootstrap DatePicker -->
+
+
+		<!--Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<div>
+			<!--Event Title-->
+			<div class="container">
+				<form action="" class="overall-border form_color">
+
+					<!--Buttons-->
+					<div class="btn-group" role="group">
+						<a href="event_homepage.php" type="button" class=" btn btn-default  btn-circle" id="back"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						<button type="submit" class="btn btn-primary">SAVE</button>	
+						<button type="reset" class="btn btn-danger btn-circle  " id="cancel"><i class="glyphicon glyphicon-remove"></i></button>	
+					</div>
+
+					<!----Title---->
+					<fieldset class="form-group margin-top-20">
+						<legend for="title">TITLE</legend>
+						<input type="text" class="form-control" id="title_id" name="title">                            
+					</fieldset> 
+
+
+
+					<!----Logistics---->
+
+					<fieldset class="form-group">
+
+						<legend >LOGISTICS</legend> 
+						<div class="row">         
+							<div class="col-md-3">
+								<input type="date" class="form-control" name="start_date"> 
+							</div>
+
+							<div class="col-md-2">
+								<input type="time" class="form-control" name="start_time">   
+							</div>
+
+
+							<div class="col-md-1">
+								<h4 for="until">UNTIL</h4>   
+							</div>
+
+							<div class="col-md-3">
+								<input type="date" class="form-control" name="end_date"> 
+							</div>
+
+							<div class="col-md-2">
+								<input type="time" class="form-control" name="end_time">   
+							</div>
+						</div>
+
+						<div class="row inline-block">
+							<div class="col-md-1">
+								<label for="until"><h4>AT</h4></label> 
+							</div>	
+
+
+							<div class="col-md-5">	
+
+								<textarea type="button" class="form-control" name="location" rows="1" cols="5" id="loc"></textarea> 
+							</div>
+
+							<div class="col-md-3">
+								<a href="googlemap.html" type="button" class="btn btn-info">MAP</a> 
+							</div>
+						</div>
+
+					</fieldset>
+
+
+					<div class="row">
+
+						<!----Description---->
+						<fieldset class = "form-group col-md-4">  
+							<legend>DESCRIPTION</legend>
+							<textarea class="form-control"  id="exampleTextarea" rows="6" name="description"></textarea>
+						</fieldset> 
+
+
+
+
+
+						<!----Documents---->
+						<fieldset class="form-group col-md-4">
+							<legend>DOCUMENTS</legend>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Birth Certificate"> Birth Certificate
+								</label>
+							</div>
+
+							<div class="checkbox">                                
+								<label>
+									<input type="checkbox" value="Passport"> Passport
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Marriage License"> Marriage License
+								</label>
+							</div>
+
+							<div class="checkbox ">
+								<label>
+									<input type="checkbox" value="Residency Card"> Residency Card
+								</label>
+							</div>
+
+							<div class="checkbox ">
+								<label>
+									<input type="checkbox" value="Health Records"> Health Records
+								</label>
+							</div>
+
+						</fieldset> 
+
+
+
+
+						<!--Aid Tags---->
+						<fieldset class="form-group col-md-4">
+							<legend>AID TAGS</legend>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Food"> Food
+								</label>
+							</div>
+
+							<div class="checkbox">                                
+								<label>
+									<input type="checkbox" value="Water"> Water
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Healthcare"> Healthcare
+								</label>
+							</div>
+
+							<div class="checkbox ">
+								<label>
+									<input type="checkbox" value="Shelter"> Shelter
+								</label>
+							</div>
+
+							<div class="checkbox ">
+								<label>
+									<input type="checkbox" value="Employment"> Employment
+								</label>
+							</div>
+
+						</fieldset> 
+
+
+					</div>
+
+
+				</form>
+			</div>
+
+		</div>
+
+
+		<!--Logistis -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script>
+			var m_location = localStorage.getItem("st_location");
+			if(m_location !== null) {
+				document.getElementById("loc").value=m_location;
+			}else {
+				document.getElementById("loc").value="";
+			}
+		</script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+	</body>
+
+</html>
