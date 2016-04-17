@@ -24,7 +24,7 @@ echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?src
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header"><u> Events </u> </h3>';
-echo '</div>';
+
 
 
 
@@ -55,7 +55,7 @@ while(true) {
 }
 
 
-
+echo '</div>';
 	
 
 function getClient() {
