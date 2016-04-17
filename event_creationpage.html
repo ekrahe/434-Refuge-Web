@@ -21,11 +21,12 @@
 			<!--Event Title-->
 			<div class="container">
 				<form action="" class="overall-border form_color">
-                    <!--Buttons-->
+
+					<!--Buttons-->
 					<div class="btn-group" role="group">
-					   <button type="button" class=" btn btn-default  btn-circle" id="back"><i class="glyphicon glyphicon-chevron-left"></i></button>
+						<a href="event_homepage.php" type="button" class=" btn btn-default  btn-circle" id="back"><i class="glyphicon glyphicon-chevron-left"></i></a>
 						<button type="submit" class="btn btn-primary">SAVE</button>	
-						 <button type="reset" class="btn btn-danger btn-circle  " id="cancel"><i class="glyphicon glyphicon-remove"></i></button>	
+						<button type="reset" class="btn btn-danger btn-circle  " id="cancel"><i class="glyphicon glyphicon-remove"></i></button>	
 					</div>
 
 					<!----Title---->
@@ -40,38 +41,44 @@
 
 					<fieldset class="form-group">
 
-						<legend >LOGISTICS</legend>           
-						<div class="col-md-2">
-							<input type="date" class="form-control" name="start_date"> 
+						<legend >LOGISTICS</legend> 
+						<div class="row">         
+							<div class="col-md-3">
+								<input type="date" class="form-control" name="start_date"> 
+							</div>
+
+							<div class="col-md-2">
+								<input type="time" class="form-control" name="start_time">   
+							</div>
+
+
+							<div class="col-md-1">
+								<h4 for="until">UNTIL</h4>   
+							</div>
+
+							<div class="col-md-3">
+								<input type="date" class="form-control" name="end_date"> 
+							</div>
+
+							<div class="col-md-2">
+								<input type="time" class="form-control" name="end_time">   
+							</div>
 						</div>
 
-						<div class="col-md-2">
-							<input type="time" class="form-control" name="start_time">   
-						</div>
+						<div class="row inline-block">
+							<div class="col-md-1">
+								<label for="until"><h4>AT</h4></label> 
+							</div>	
 
 
-						<div class="col-md-1">
-							<h4 for="until">UNTIL</h4>   
-						</div>
+							<div class="col-md-5">	
 
-						<div class="col-md-2">
-							<input type="date" class="form-control" name="end_date"> 
-						</div>
+								<textarea type="button" class="form-control" name="location" rows="1" cols="5" id="loc"></textarea> 
+							</div>
 
-						<div class="col-md-2">
-							<input type="time" class="form-control" name="end_time">   
-						</div>
-
-						<div class="col-md-1">
-							<h4 for="until">AT</h4>   
-						</div>
-
-						<div class="col-md-1">						    
-							<input type="text" class="form-control" name="location"> 
-						</div>
-
-						<div class="col-md-1">
-							<h4><span class="label label-default" >MAP</span></h4> 
+							<div class="col-md-3">
+								<a href="googlemap.html" type="button" class="btn btn-info">MAP</a> 
+							</div>
 						</div>
 
 					</fieldset>
@@ -176,6 +183,14 @@
 		<!--Logistis -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script>
+			var m_location = localStorage.getItem("st_location");
+			if(m_location !== null) {
+				document.getElementById("loc").value=m_location;
+			}else {
+				document.getElementById("loc").value="";
+			}
+		</script>
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	</body>
