@@ -28,10 +28,18 @@ body{
 
 }
 .event_creator{
-	margin-left: 85%; /*85%*/
+	margin-left: 77%; 
 	position: fixed;
+	width: 20%;
+   height: 89.35%;
+   background-color: white;
+   border-color: #333;
+   border-style: solid;
+   border-width: 1.5 px;
+   color: #333;
 
 }
 .events_header{
 	font-weight: normal;
+	margin-left: 35%; 
 }
