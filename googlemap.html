@@ -20,7 +20,7 @@
 					placeMarker(event.latLng);						  
 				});	
 
-            
+
 				// Zoom to 9 when clicking on marker
 
 				google.maps.event.addListener(marker,'click',function() {
@@ -81,19 +81,18 @@
 
 
 			<div class="row text-center"  >			
-			<a href="event_creationpage.html" type="button" class="btn btn-danger text-center" style="margin:25px" id="cancelled">CANCEL</a> 
-			
+				<a href="event_creationpage.html" type="button" class="btn btn-danger text-center" style="margin:25px" id="cancelled">CANCEL</a> 
+
 				<a href="event_creationpage.html" type="button" class="btn btn-success text-center"  name="mlocation" >SET LOCATION</a>
 			</div>
 		</div>
-		
+
 		<script>	
-			
+
 			function remove() {
-				 localStorage.removeItem("st_location");
-			  alert("button was clicked");
+				localStorage.removeItem("st_location");				
 			}
-		 var oncancel = document.getElementById("cancelled");
+			var oncancel = document.getElementById("cancelled");
 			oncancel.addEventListener('click',remove);
 		</script>
 
