@@ -2,7 +2,7 @@ body{
 	background-color:#00BCD4;
 	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
 	font-weight: normal;
-	color:white;
+	color:black;
 }
 .header{
 	margin-left: 45%;
@@ -51,7 +51,7 @@ body{
 .events_header{
 	font-weight: normal;
 	font-size: 180%;
-	margin-left: 30%;
+	text-align: center;
 	margin-bottom:10px; 
 	margin-top: 0; 
 }
