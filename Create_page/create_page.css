@@ -8,9 +8,9 @@ body{
 }
 .margin-top-20 { margin-top: 2.0em; }
 .overall-border { 
-	margin-top: 70px;
+	margin-top: 7px;
 	border-style: solid;
-	padding: 20px;
+	padding: 10px;
 }
 
 .btn-circle {
