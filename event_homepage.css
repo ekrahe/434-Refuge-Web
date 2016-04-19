@@ -58,7 +58,7 @@ body{
 .events{
 	overflow:scroll;
 	overflow-y:auto;
-	height:90%;
+	height:86%;
 }
 .event h4{
 	margin:0;
