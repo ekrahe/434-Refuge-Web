@@ -120,7 +120,7 @@ foreach ($events->getItems() as $event) {
 	
         
 }
-
+echo 'hello!!';
 
 echo '</div>';
 

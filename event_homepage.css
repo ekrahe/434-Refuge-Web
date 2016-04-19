@@ -43,6 +43,10 @@ body{
 	font-weight: normal;
 	margin-left: 35%; 
 }
+.events{
+	
+}
+
 .create_event{
 	position: absolute;
 	bottom:0;
