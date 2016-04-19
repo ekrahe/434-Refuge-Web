@@ -5,7 +5,7 @@ body{
 	color:white;
 }
 .header{
-	margin-left: 50%;
+	margin-left: 45%;
 	font-weight: normal;
 
 }
@@ -14,17 +14,26 @@ body{
 	margin-right:20%;
 	position: fixed;
 	width: 	55%; /*55%*/
-	height: 90%; /*90%*/
+	height: 89.35%; /*90%*/
+	   border-color: #333;
+   border-style: solid;
+   border-width: 3px;
+	
 	
 }
 .sidebar{
-   width: 20%;
-   height: 100%;
+   width: 16.9%;
+   height: 89.35%;
+   margin-left: 1.8%;
    position: fixed;
    left: 0px;
    /*top: 300px;*/
-   border-right: 2px solid white;
-   border-color: #FF8A80;
+     background-color: white;
+   border-color: #333;
+   border-style: solid;
+   border-width: 1.5 px;
+   color: #333;
+   
 
 }
 .event_creator{
@@ -75,3 +84,14 @@ body{
     font-size: 150%;
     letter-spacing: 2px;
 }
+
+.task_content{
+	color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    font-size: 150%;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 46.7%;
+}
+

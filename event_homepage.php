@@ -15,16 +15,29 @@ define('SCOPES', implode(' ', array(
 echo '<link href="event_homepage.css" rel="stylesheet">';
 echo '<h1 class="header">REFUGE</h1	>';
 echo '<div class="sidebar">';     
-echo '<p>text</p>';
 
+echo'<h3 class="events_header"><u> Tasks </u> </h3>';
 
+echo '<a href=""><button class="task_content">Push Notificaiton</button></a>';
+echo '<a href="event_homepage.php"><button class="task_content">Event Creation</button></a>';
 
 echo '</div>';
 echo '<div class="center">';
-echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?src=f2prj9o0uq3cju3sh9hs67mhik%40group.calendar.google.com&ctz=America/New_York\" style=\"border: 0\"  frameborder=\"0\" scrolling=\"no\"></iframe>";
+echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?src=f2prj9o0uq3cju3sh9hs67mhik%40group.calendar.google.com&ctz=America/New_York\" style= scrolling=\"no\"></iframe>";
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header"><u> Events </u> </h3>';
+
+/*echo '<div class=task_content>';
+		
+echo '</div>';
+
+echo '<div class=event_content>';
+
+echo '</div>';*/
+
+
+
 
 
 ////////////////////////
