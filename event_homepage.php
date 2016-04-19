@@ -18,7 +18,7 @@ echo '<div class="sidebar">';
 
 echo'<h3 class="events_header"><u> Tasks </u> </h3>';
 
-echo '<a href=""><button class="task_content">Push Notificaiton</button></a>';
+echo '<a href=""><button class="task_content">Push Notification</button></a>';
 echo '<a href="event_homepage.php"><button class="task_content">Event Creation</button></a>';
 
 echo '</div>';
@@ -123,6 +123,7 @@ if(isset($_POST['submit'])) {
 //////////////////////////AKIVA"S CODE
 
 echo '<div class="events">';
+
 $optParams = array(
   'orderBy' => 'startTime',
   'singleEvents' => TRUE,
