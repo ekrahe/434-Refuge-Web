@@ -108,24 +108,25 @@ if(isset($_POST['submit'])) {
 
 //////////////////////////AKIVA"S CODE
 
-
+echo '<div class="events">';
 $events = $service->events->listEvents('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com'); //long string is calandarID
-
-while(true) {
-	foreach ($events->getItems() as $event) {
-		echo $event->getSummary();
-        
-	}
-	$pageToken = $events->getNextPageToken();
-	if ($pageToken) {
-		$optParams = array('pageToken' => $pageToken);
-		$events = $service->events->listEvents('primary', $optParams);
-	} else {
+$i=0;
+foreach ($events->getItems() as $event) {
+	echo $event->description;
+	$i++;
+	if($i==2){
 		break;
 	}
+	
+        
 }
+echo 'hello!!';
+
+echo '</div>';
 
 
+
+echo '<button class="create_event">Create Event</button>';
 echo '</div>';
 
 
