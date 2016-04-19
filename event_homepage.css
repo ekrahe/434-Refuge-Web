@@ -41,10 +41,27 @@ body{
 }
 .events_header{
 	font-weight: normal;
-	margin-left: 35%; 
+	font-size: 180%;
+	margin-left: 30%;
+	margin-bottom:10px; 
+	margin-top: 0; 
 }
 .events{
-	
+	overflow:scroll;
+	overflow-y:auto;
+	height:90%;
+}
+.event h4{
+	margin:0;
+	font-size: 100%;
+
+}
+.event{
+	background-color: #E3F2FD;
+	margin: 5px;
+}
+.event_content{
+	font-size: 80%;
 }
 
 .create_event{
@@ -55,4 +72,6 @@ body{
 	color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
+    font-size: 150%;
+    letter-spacing: 2px;
 }

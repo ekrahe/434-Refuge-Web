@@ -109,24 +109,52 @@ if(isset($_POST['submit'])) {
 //////////////////////////AKIVA"S CODE
 
 echo '<div class="events">';
-$events = $service->events->listEvents('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com'); //long string is calandarID
+$optParams = array(
+  'orderBy' => 'startTime',
+  'singleEvents' => TRUE,
+);
+
+
+$events = $service->events->listEvents('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com', $optParams); //long string is calandarID
 $i=0;
 foreach ($events->getItems() as $event) {
-	echo $event->description;
+	echo '<div class="event">';
+			echo '<h4><u>';
+			echo $event->summary;
+			echo '</u></h4>';
+				
+			echo '<div class="event_content">';
+			echo '<b>Where:</b>'.$event->location;
+			echo "<br>";
+
+			echo '<b>When:</b>'.substr($event->getStart()->dateTime, -8).'-'.substr($event->getEnd()->dateTime, -8).PHP_EOL;
+
+			//echo 'time'.PHP_EOL;
+			//$fulltime=$event->getStart();
+			
+
+  			//echo substr($fulltime->dateTime, -8);
+			echo '</div>';
+	echo '</div>';
+
+
+	//echo $event->description;
+	
+
 	$i++;
-	if($i==2){
-		break;
-	}
+	//if($i==2){
+	//	break;
+	//}
 	
         
 }
-echo 'hello!!';
+
 
 echo '</div>';
 
 
 
-echo '<button class="create_event">Create Event</button>';
+echo '<a href="event_creationpage.html"><button class="create_event">Create Event</button></a>';
 echo '</div>';
 
 
