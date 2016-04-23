@@ -142,7 +142,26 @@ foreach ($events->getItems() as $event) {
 			echo '<b>Where:</b>'.$event->location;
 			echo "<br>";
 
-			echo '<b>When:</b>'.substr($event->getStart()->dateTime, -8).'-'.substr($event->getEnd()->dateTime, -8).PHP_EOL;
+		
+
+
+			$pattern= '/(\d*-\d*-\d*)T(\d*:\d*):(\d*)-(\d*:\d*)/';
+
+			preg_match($pattern, $event->getStart()->dateTime, $startMatch);
+			preg_match($pattern, $event->getEnd()->dateTime, $endMatch);
+
+			
+
+
+			echo '<b>When:</b>';
+			echo "<br>";
+			echo $startMatch[2]. ' ('. $startMatch[1]. ')';
+
+			//echo $startMatch[1].', '.$startMatch[2];
+			echo "<br>";
+			echo '-';
+			echo '<br>';
+			echo $endMatch[2]. ' ('. $endMatch[1]. ')';
 
 			//echo 'time'.PHP_EOL;
 			//$fulltime=$event->getStart();
