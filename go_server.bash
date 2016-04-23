@@ -1,0 +1,1 @@
+ssh -i ~/.ssh/Refuge_key.pem  ec2-user@ec2-54-172-72-146.compute-1.amazonaws.com
