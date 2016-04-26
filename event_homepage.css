@@ -11,6 +11,10 @@ a{
 a:visited{
 	color: #333;
 }
+a:-webkit-any-link{
+	color: #333;
+}
+
 .header{
 	margin-left: 45%;
 	font-weight: normal;
@@ -125,4 +129,5 @@ a:visited{
 	background-color: white;*/
 	
 }
+
 
