@@ -26,7 +26,7 @@ echo '<div class="center">';
 echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?src=f2prj9o0uq3cju3sh9hs67mhik%40group.calendar.google.com&ctz=America/New_York\" style= scrolling=\"no\"></iframe>";
 echo '</div>';
 echo '<div class="event_creator">';
-echo'<h3 class="events_header"><u> Events </u> </h3>';
+echo'<h3 class="events_header"><u> Upcoming Events </u> </h3>';
 
 /*echo '<div class=task_content>';
 		
@@ -131,55 +131,59 @@ $optParams = array(
 
 
 $events = $service->events->listEvents('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com', $optParams); //long string is calandarID
-$i=0;
+
+date_default_timezone_set('America/Los_Angeles');
+$date = new DateTime('now');
+$date-> format ("Y-m-d\TH:i:sP");
 foreach ($events->getItems() as $event) {
-	echo '<div class="event">';
-			echo '<h4><u>';
-			echo $event->summary;
-			echo '</u></h4>';
+	//only display future events 
+	if((new DateTime($event->getStart()->dateTime))->getTimestamp()-$date->getTimestamp() > 0){
+		echo '<div class="event">';
+				echo '<h4><u>';
+				echo $event->summary;
+				echo '</u></h4>';
 				
-			echo '<div class="event_content">';
-			echo '<b>Where:</b>'.$event->location;
-			echo "<br>";
-
-		
+				echo '<div class="event_content">';
+				echo '<b>Where:</b>'.$event->location;
+				echo "<br>";
 
 
-			$pattern= '/(\d*-\d*-\d*)T(\d*:\d*):(\d*)-(\d*:\d*)/';
 
-			preg_match($pattern, $event->getStart()->dateTime, $startMatch);
-			preg_match($pattern, $event->getEnd()->dateTime, $endMatch);
+				$pattern= '/(\d*-\d*-\d*)T(\d*:\d*):(\d*)-(\d*:\d*)/';
+
+				preg_match($pattern, $event->getStart()->dateTime, $startMatch);
+				preg_match($pattern, $event->getEnd()->dateTime, $endMatch);
 
 			
 
 
-			echo '<b>When:</b>';
-			echo "<br>";
-			echo $startMatch[2]. ' ('. $startMatch[1]. ')';
+				echo '<b>When:</b>';
+				echo "<br>";
+				echo $startMatch[2]. ' ('. $startMatch[1]. ')';
 
-			//echo $startMatch[1].', '.$startMatch[2];
-			echo "<br>";
-			echo '-';
-			echo '<br>';
-			echo $endMatch[2]. ' ('. $endMatch[1]. ')';
+				//echo $startMatch[1].', '.$startMatch[2];
+				echo "<br>";
+				echo '-';
+				echo '<br>';
+				echo $endMatch[2]. ' ('. $endMatch[1]. ')';
 
-			//echo 'time'.PHP_EOL;
-			//$fulltime=$event->getStart();
+				//echo 'time'.PHP_EOL;
+				//$fulltime=$event->getStart();
 			
 
-  			//echo substr($fulltime->dateTime, -8);
-			echo '</div>';
-	echo '</div>';
+  				//echo substr($fulltime->dateTime, -8);
+				echo '</div>';
+		echo '</div>';
 
 
 	//echo $event->description;
 	
 
-	$i++;
+	
 	//if($i==2){
 	//	break;
 	//}
-	
+	}
         
 }
 
