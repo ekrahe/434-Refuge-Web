@@ -1,8 +1,15 @@
 body{
-	background-color:#00BCD4;
+	background-color: #00BCD4;
 	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
 	font-weight: normal;
 	color:white;
+}
+a{
+	text-decoration: none;
+
+}
+a:visited{
+	color: #333;
 }
 .header{
 	margin-left: 45%;
@@ -52,8 +59,16 @@ body{
 	font-weight: normal;
 	font-size: 180%;
 	text-align: center;
+	margin-bottom:0px; 
+	margin-top: 0; 
+}
+.events_subheader{
+	font-weight: normal;
+	font-size: 100%;
+	text-align: center;
 	margin-bottom:10px; 
 	margin-top: 0; 
+
 }
 .events{
 	overflow:scroll;
@@ -64,13 +79,17 @@ body{
 	margin:0;
 	font-size: 100%;
 
+
 }
 .event{
 	background-color: #E3F2FD;
 	margin: 5px;
+	text-decoration: none;
+	color: #333;
 }
 .event_content{
 	font-size: 80%;
+	text-decoration: none;
 }
 
 .create_event{
@@ -83,6 +102,7 @@ body{
     border-color: #2e6da4;
     font-size: 150%;
     letter-spacing: 2px;
+    text-decoration: none;
 }
 
 .task_content{
@@ -93,5 +113,16 @@ body{
     letter-spacing: 2px;
     width: 100%;
     height: 46.7%;
+}
+.eventInfo{
+	display: none;
+	text-decoration: none;
+	/*visibility: hidden;
+	display: none;
+	margin-left: 50%;
+	margin-right: 50%;
+	color: #333;
+	background-color: white;*/
+	
 }
 

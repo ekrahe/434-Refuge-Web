@@ -11,8 +11,12 @@ define('SCOPES', implode(' ', array(
 	Google_Service_Calendar::CALENDAR)
 						));
 
-
+echo '<!DOCTYPE html>';
+echo '<head>';
+echo '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>';
+echo '<script type="text/javascript" src="event_homepage.js"></script>';
 echo '<link href="event_homepage.css" rel="stylesheet">';
+echo '</head>';
 echo '<h1 class="header">REFUGE</h1	>';
 echo '<div class="sidebar">';     
 
@@ -20,21 +24,21 @@ echo'<h3 class="events_header"><u> Tasks </u> </h3>';
 
 echo '<a href=""><button class="task_content">Push Notification</button></a>';
 echo '<a href="event_homepage.php"><button class="task_content">Event Creation</button></a>';
+echo '<html xmlns="http://www.w3.org/1999/xhtml">';
+
 
 echo '</div>';
+
+
+
+
 echo '<div class="center">';
 echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?src=f2prj9o0uq3cju3sh9hs67mhik%40group.calendar.google.com&ctz=America/New_York\" style= scrolling=\"no\"></iframe>";
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header"><u> Upcoming Events </u> </h3>';
+echo '<h5 class="events_subheader"> Click On Event To See More </h5>';
 
-/*echo '<div class=task_content>';
-		
-echo '</div>';
-
-echo '<div class=event_content>';
-
-echo '</div>';*/
 
 
 
@@ -138,7 +142,45 @@ $date-> format ("Y-m-d\TH:i:sP");
 foreach ($events->getItems() as $event) {
 	//only display future events 
 	if((new DateTime($event->getStart()->dateTime))->getTimestamp()-$date->getTimestamp() > 0){
-		echo '<div class="event">';
+
+		//setup Regex's to capture info from Google API
+
+		//dateTime formatting
+		$dateTimePattern= '/(\d*-\d*-\d*)T(\d*:\d*):(\d*)-(\d*:\d*)/';
+		
+
+		/*the IF block below is to get event description, documents and aid. Since not all three are 
+			always going to be provided, each permutation is accounted for
+		*/
+
+		if(strpos($event->description, 'DOCUMENTS') && strpos($event->description, 'AID')){
+			$eventDescriptionPattern='/(.*)DOCUMENTS:(.*)AID:(.*)/';
+		}else if (strpos($event->description, 'DOCUMENTS')){
+			$eventDescriptionPattern='/(.*)DOCUMENTS:(.*)/';
+		}else if(strpos($event->description, 'AID')){
+			$eventDescriptionPattern='/(.*)AID:(.*)/';
+		}else{
+			$eventDescriptionPattern='/(.*)/';
+		}	
+
+		$eventDescription=trim(preg_replace("/\r\n/",  ' ' , $event->description));
+
+
+		preg_match($dateTimePattern, $event->getStart()->dateTime, $startMatch);
+		preg_match($dateTimePattern, $event->getEnd()->dateTime, $endMatch);
+		preg_match($eventDescriptionPattern, $eventDescription, $descriptionMatch);
+
+	
+	
+
+	
+		//''.$startMatch[1].','.$startMatch[2].','.$endMatch[1].','.$endMatch[2].''
+
+		//echo '<div class="event" onclick="seeDetails('. htmlspecialchars($jscode)  .')" >';
+		echo '<a class="eventButton" href="#">';
+		echo '<div class="event" onclick="seeDetails(\''. $startMatch[1]  .'\', \''. $startMatch[2]  
+					.'\', \''. $endMatch[1]  .'\', \''. $endMatch[2]  .'\', \''. $event->location.'\', \''
+					. $descriptionMatch[1]  .'\', \'' . substr($descriptionMatch[2],0,-2)  .'\' , \'' . substr($descriptionMatch[3],0,-1)  .'\')" >';
 				echo '<h4><u>';
 				echo $event->summary;
 				echo '</u></h4>';
@@ -149,10 +191,6 @@ foreach ($events->getItems() as $event) {
 
 
 
-				$pattern= '/(\d*-\d*-\d*)T(\d*:\d*):(\d*)-(\d*:\d*)/';
-
-				preg_match($pattern, $event->getStart()->dateTime, $startMatch);
-				preg_match($pattern, $event->getEnd()->dateTime, $endMatch);
 
 			
 
@@ -161,28 +199,39 @@ foreach ($events->getItems() as $event) {
 				echo "<br>";
 				echo $startMatch[2]. ' ('. $startMatch[1]. ')';
 
-				//echo $startMatch[1].', '.$startMatch[2];
+
 				echo "<br>";
 				echo '-';
 				echo '<br>';
 				echo $endMatch[2]. ' ('. $endMatch[1]. ')';
 
-				//echo 'time'.PHP_EOL;
-				//$fulltime=$event->getStart();
-			
+				
+				echo '<div class="eventInfo">';
+					echo ' <a href="#" class="closeButton"></a>';
+					echo '<b>What:</b>';
+					echo '<br>';
+					echo $descriptionMatch[1];
+					echo '<br>';
+					echo '<b>Documents:</b>';
+					echo '<br>';
+					echo substr($descriptionMatch[2],0,-2);
+					echo '<br>';
+					echo '<b>Aid:</b>';
+					echo '<br>';
+					echo substr($descriptionMatch[3],0,-1);
 
-  				//echo substr($fulltime->dateTime, -8);
 				echo '</div>';
+
+					
+				echo '</div>';
+
+
+
+			
 		echo '</div>';
+	echo '</a>';
 
 
-	//echo $event->description;
-	
-
-	
-	//if($i==2){
-	//	break;
-	//}
 	}
         
 }
