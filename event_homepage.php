@@ -177,10 +177,14 @@ foreach ($events->getItems() as $event) {
 		//''.$startMatch[1].','.$startMatch[2].','.$endMatch[1].','.$endMatch[2].''
 
 		//echo '<div class="event" onclick="seeDetails('. htmlspecialchars($jscode)  .')" >';
-		echo '<a class="eventButton" href="#">';
-		echo '<div class="event" onclick="seeDetails(\''. $startMatch[1]  .'\', \''. $startMatch[2]  
+		/*
+				echo '<div class="event" onclick="seeDetails(\''. $startMatch[1]  .'\', \''. $startMatch[2]  
 					.'\', \''. $endMatch[1]  .'\', \''. $endMatch[2]  .'\', \''. $event->location.'\', \''
 					. $descriptionMatch[1]  .'\', \'' . substr($descriptionMatch[2],0,-2)  .'\' , \'' . substr($descriptionMatch[3],0,-1)  .'\')" >';
+
+		*/
+		echo '<a class="eventButton" href="#">';
+		echo '<div class="event">';
 				echo '<h4><u>';
 				echo $event->summary;
 				echo '</u></h4>';
