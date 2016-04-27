@@ -209,8 +209,8 @@ foreach ($events->getItems() as $event) {
 				echo '<br>';
 				echo $endMatch[2]. ' ('. $endMatch[1]. ')';
 
-				
 				echo '<div class="eventInfo">';
+					
 					echo ' <a href="#" class="closeButton"></a>';
 					echo '<b>What:</b>';
 					echo '<br>';
@@ -223,10 +223,12 @@ foreach ($events->getItems() as $event) {
 					echo '<b>Aid:</b>';
 					echo '<br>';
 					echo substr($descriptionMatch[3],0,-1);
-
-				echo '</div>';
-
 					
+				echo '</div>';
+			
+				
+
+
 				echo '</div>';
 
 
