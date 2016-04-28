@@ -23,7 +23,7 @@ echo '<div class="sidebar">';
 echo'<h3 class="events_header"><u> Tasks </u> </h3>';
 
 echo '<a href=""><button class="task_content">Push Notification</button></a>';
-echo '<a href="event_homepage.php"><button class="task_content">Event Creation</button></a>';
+echo '<a href="event_creationpage.html"><button class="task_content">Create Event</button></a>';
 echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 
 
@@ -247,7 +247,7 @@ echo '</div>';
 
 
 
-echo '<a href="event_creationpage.html"><button class="create_event">Create Event</button></a>';
+//echo '<a href="event_creationpage.html"><button class="create_event">Create Event</button></a>';
 echo '</div>';
 
 
