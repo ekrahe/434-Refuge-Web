@@ -17,8 +17,9 @@ echo '</div>';
 echo '</body>';
 echo '</html>';
 	
-	
+
 	$msg;
+
 
 	if(isset($_POST['submit'])) {
 	
@@ -32,6 +33,7 @@ echo '</html>';
 
 	$descript = 'TITLE:'.$title.', LOCATION:'.$location.', TYPE '.$type.',MESSAGE:'.$description."\r\n";
 
+
 	if(!empty($documents)) {
 		$descript.='DOCUMENTS:';
 		$doc ="";	    
@@ -42,6 +44,7 @@ echo '</html>';
 		$descript .=$doc."\r\n";
 	}
 	
+
 		//echo $descript;
 		//The message to be sent out.
 		$msg = $descript;
