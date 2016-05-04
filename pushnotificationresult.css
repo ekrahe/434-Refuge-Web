@@ -1,0 +1,33 @@
+body{
+	background-color: #00BCD4;
+	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
+	font-weight: normal;
+	color:white;
+}
+.header{
+	margin-left: 45%;
+	font-weight: normal;
+
+}
+.center{
+   width: 80%;
+   height:20%;
+   margin-left: 10%;
+   position: fixed;
+   left: 0px;
+   background-color: white;
+   border-color: #333;
+   border-style: solid;
+   border-width: 1.5 px;
+   color: #333;
+   
+
+}
+.thanks{
+	text-align: center;
+}
+
+.message{
+	text-align: center;
+
+}
