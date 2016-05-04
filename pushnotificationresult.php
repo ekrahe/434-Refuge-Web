@@ -4,18 +4,14 @@ echo '<html>';
 echo '<head>';
 echo '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>';
 echo '<script type="text/javascript" src="event_homepage.js"></script>';
-echo '<link href="pushnotificationresult.css" rel="stylesheet">';
 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">';
+echo '<link href="pushnotificationresult.css" rel="stylesheet">';
 echo '</head>';
 echo '<body>';
 echo '<h1 class="header">REFUGE</h1	>';
 echo '<div class="center">';
 echo '<h2 class="thanks"> Thank You! Your message has been sent!</h2>';
-echo '<h3 class="message"> MESSAGE TEXT HERE </h3>';
-echo '<a href="event_homepage.php" type="button" class=" message btn btn-success text-center col-md-offset-5" id="back">TAKE ME HOME</a>';
-echo '</div>';
-echo '</body>';
-echo '</html>';
+
 	
 
 	$msg;
@@ -50,6 +46,21 @@ echo '</html>';
 		$msg = $descript;
 			
 }
+echo '<h3 class="message"><b>Title: </b>'.$title .'</h3>';
+echo '<h3 class="message"><b>Location: </b>'.$location .'</h3>';
+echo '<h3 class="message"><b>Type: </b>'.$type .'</h3>';
+	if(!empty($documents)) {
+		echo '<h3 class="message"><b>Documents: </b>'.$documents .'</h3>';
+	}
+echo '<h3 class="message"><b>Message: </b>'.$description .'</h3>';
+
+
+
+echo '<a href="event_homepage.php" type="button" class=" message btn btn-success text-center col-md-offset-5" id="back">HOME PAGE</a>';
+echo '</div>';
+echo '</body>';
+echo '</html>';
+
 
 
 //ONLY UNCOMMENT WHEN READY TO SEND
