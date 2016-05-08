@@ -1,8 +1,9 @@
 body{
-	background-color: #00BCD4;
+	background-color: #92C6EC; 
 	font-family: Verdana, Rotobo, Noto, Century Gothinc, Calibri;
 	font-weight: normal;
-	color:white;
+	/*color:#1366B3;*/
+	color: #333;
 }
 a{
 	text-decoration: none;
@@ -17,42 +18,42 @@ a:-webkit-any-link{
 
 .header{
 	margin-left: 45%;
-	font-weight: normal;
+	font-weight: lighter;
 
 }
+.taskLinks{
+	
+	
+	vertical-align: center;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.taskLinks a{
+	color: #0000EE;
+	text-decoration: underline;
+}
+
+
 .cal{
-	margin-left: 20%;
-	margin-right:20%;
+	margin-left: 0.75%;
+	/*margin-right:20%;*/
 	position: fixed;
-	width: 	55%; /*55%*/
+	width: 	76%; /*55%*/
 	height: 89.35%; /*90%*/
-	   border-color: #333;
+	border-color: #333;
    border-style: solid;
    border-width: 3px;
 	
 	
 }
-.sidebar{
-   width: 16.9%;
-   height: 89.35%;
-   margin-left: 1.8%;
-   position: fixed;
-   left: 0px;
-   /*top: 300px;*/
-     background-color: white;
-   border-color: #333;
-   border-style: solid;
-   border-width: 1.5 px;
-   color: #333;
-   
 
-}
 .event_creator{
-	margin-left: 77%; 
+	margin-left: 78.0%; 
+
 	position: fixed;
 	width: 20%;
    height: 89.35%;
-   background-color: white;
+   background-color: #E3F2FD;
    border-color: #333;
    border-style: solid;
    border-width: 1.5 px;
@@ -78,6 +79,7 @@ a:-webkit-any-link{
 	overflow:scroll;
 	overflow-y:auto;
 	height:87%;
+
 }
 .event h4{
 	margin:0;
@@ -86,10 +88,14 @@ a:-webkit-any-link{
 
 }
 .event{
-	background-color: #E3F2FD;
+	background-color: #FFFFFF;
 	margin: 5px;
 	text-decoration: none;
 	color: #333;
+	border-style: solid;
+	border-color: #333;
+	border-width: 1px;
+	text-align: center;
 }
 .event_content{
 	font-size: 80%;

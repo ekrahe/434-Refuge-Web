@@ -50,7 +50,10 @@ echo '<h3 class="message"><b>Title: </b>'.$title .'</h3>';
 echo '<h3 class="message"><b>Location: </b>'.$location .'</h3>';
 echo '<h3 class="message"><b>Type: </b>'.$type .'</h3>';
 	if(!empty($documents)) {
-		echo '<h3 class="message"><b>Documents: </b>'.$documents .'</h3>';
+		foreach ($documents as $docs) {
+			$doc.=$docs.',' ;
+		}
+		echo '<h3 class="message"><b>Documents: </b>'.$doc .'</h3>';
 	}
 echo '<h3 class="message"><b>Message: </b>'.$description .'</h3>';
 
@@ -64,7 +67,7 @@ echo '</html>';
 
 
 //ONLY UNCOMMENT WHEN READY TO SEND
-//mail(file_get_contents(dirname(dirname(__FILE__)).'/phone.txt'),"AID!!",$msg, $headers);
+mail(file_get_contents(dirname(dirname(__FILE__)).'/phone.txt'),"AID!!",$msg, $headers);
 
 
 ?>

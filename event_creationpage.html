@@ -10,6 +10,9 @@
 
 		<link rel="stylesheet" type="text/css" href="Create_page/create_page.css" >
 		<!--Bootstrap DatePicker -->
+		<link rel="stylesheet" type="text/css" href="Create_page/date_picker.css" >
+		<!--script type="text/javascript" src="Create_page/bootstrap-datetimepicker .js"></script>
+<script type="text/javascript" src="Create_page/moment.js"></script>-->
 
 
 		<!--Bootstrap CSS -->
@@ -28,15 +31,19 @@
 
 					<!--Buttons-->
 					<div class="btn-group" role="group">
-					<a href="event_homepage.php" type="button" class=" btn btn-default  btn-circle" id="back"><i class="glyphicon glyphicon-chevron-left"></i></a>
-					<button type="submit" class="btn btn-primary" name="submit" onclick="return deleteCookie();" >SAVE</button>	
-					<button type="reset" class="btn btn-warning" id="cancel" >CLEAR</button>	
+						<a href="event_homepage.php" type="button" class=" btn btn-default  btn-circle" id="back"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						<button type="submit" class="btn btn-primary" name="submit" onclick="return deleteCookie();" >SAVE</button>	
+						<button type="reset" class="btn btn-warning" id="cancel" >CLEAR</button>	
 					</div>
 
 					<!----Title---->
 					<fieldset class="form-group margin-top-20">
-						<legend for="title">TITLE</legend>
-						<input type="text" class="form-control" id="title_id" name="title" autocomplete="off">                            
+						<legend for="title" class="require"><span class="small">Title</span></legend>
+						<div class="row">
+						<div class="col-md-6 col-md-offset-1">
+						<input type="text" class="form-control" id="title_id" name="title" autocomplete="off"> 
+						</div>
+						</div>                           
 					</fieldset> 
 
 
@@ -45,43 +52,63 @@
 
 					<fieldset class="form-group">
 
-						<legend >LOGISTICS</legend> 
-						<div class="row">         
+						<legend class="require"><span class="small">Logistics</span></legend> 
+						<div class=" form-group row">				
+							<label for="start_date_id" class="control-label col-md-1">Start:</label>
+
+							<div class="col-md-3"> 
+							
+								<div class="input-group date" id="start_date_id" data-date="" data-date-format="MM dd yyyy">
+									<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
+									</span> 
+									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
+									</span> 
+								</div>
+							</div>  
+
 							<div class="col-md-3">
-								<input type="date" class="form-control" name="start_date" id="start_date_id"> 
-							</div>
-
-							<div class="col-md-2">
-								<input type="time" class="form-control" name="start_time" id="start_time_id" placeholder="HR:MIN:AM/PM">   
-							</div>
-
-
-							<div class="col-md-1">
-								<h4 for="until">UNTIL</h4>   
-							</div>
-
-							<div class="col-md-3">
-								<input type="date" class="form-control" name="end_date" id="end_date_id"> 
-							</div>
-
-							<div class="col-md-2">
-								<input type="time" class="form-control" name="end_time" id="end_time_id" placeholder="HR:MIN:AM/PM">   
+								<div class="input-group date" id="start_time_id" data-date="" data-date-format="hh:ii:P">
+									<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								</div>
 							</div>
 						</div>
 
-						<div class="row inline-block">
-							<div class="col-md-1">
-								<label for="until"><h4>AT</h4></label> 
-							</div>	
 
+						<div class="form-group row">
+							<label for="end_date_id" class="control-label col-md-1">End:</label> 
 
-							<div class="col-md-5">	
+							<div class="col-md-3"> 
+							
+								<div class="input-group date" id="end_date_id" data-date="" data-date-format="MM dd yyyy">
+									<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
+									</span> 
+									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
+									</span> 
+								</div>
+							</div>  
 
+							<div class="col-md-3">
+								<div class="input-group date" id="end_time_id" data-date="" data-date-format="hh:ii">
+									<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" >
+									<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="loc" class="control-label col-md-1">Location:</label> 
+
+							<div class="col-md-3">
 								<textarea type="button" class="form-control" name="location" rows="1" cols="5" id="loc"></textarea> 
 							</div>
 
 							<div class="col-md-3">
-								<a href="googlemap.html" type="button" class="btn btn-info" id="map" onclick="return makecookie();">MAP</a> 
+								<a href="googlemap.html" type="button" class="btn btn-info" id="map" onclick="return makecookie();">Map</a> 
 							</div>
 						</div>
 
@@ -92,17 +119,13 @@
 
 						<!----Description---->
 						<fieldset class = "form-group col-md-4">  
-							<legend>DESCRIPTION</legend>
+							<legend  class="require"><span class="small">Description</span></legend>
 							<textarea class="form-control" rows="6" name="description"  id="description_id"></textarea>
 						</fieldset> 
 
-
-
-
-
 						<!----Documents---->
-						<fieldset class="form-group col-md-4">
-							<legend>DOCUMENTS</legend>
+						<fieldset class="form-group col-md-3">
+							<legend><span class="small">Documents</span></legend>
 
 							<div class="checkbox">
 								<label>
@@ -141,7 +164,7 @@
 
 						<!--Aid Tags---->
 						<fieldset class="form-group col-md-4">
-							<legend>AID TAGS</legend>
+							<legend><span class="small">Aid Tags</span></legend>
 							<div class="checkbox">
 								<label>
 									<input type="checkbox" value="Food" name="aid[]" id="food_id"> Food
@@ -194,6 +217,67 @@
 		<!--Logistis -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="Create_page/bootstrap-datepicker.js"></script>
+
+
+		<script type="text/javascript"> 
+
+			$(function () {
+
+				$('#start_date_id').datetimepicker( {
+					weekStart: 1,
+					todayBtn:  1,
+					autoclose: 1,
+					todayHighlight: 1,
+					startView: 2,
+					minView: 2,
+					forceParse: 0
+
+				});
+
+				$('#start_time_id').datetimepicker({
+					weekStart: 1,
+					todayBtn:  1,
+					autoclose: 1,
+					todayHighlight: 1,
+					startView: 1,
+					minView: 0,
+					maxView: 1,
+					forceParse: 0,
+					showMeridian:true
+				});
+				
+				
+				$('#end_date_id').datetimepicker( {
+					weekStart: 1,
+					todayBtn:  1,
+					autoclose: 1,
+					todayHighlight: 1,
+					startView: 2,
+					minView: 2,
+					forceParse: 0
+
+				});
+
+				$('#end_time_id').datetimepicker({
+					weekStart: 1,
+					todayBtn:  1,
+					autoclose: 1,
+					todayHighlight: 1,
+					startView: 1,
+					minView: 0,
+					maxView: 1,
+					forceParse: 0,
+					showMeridian:true
+				});
+				//alert('Hi');
+
+			});
+
+		</script>
+
 
 
 		<script>
