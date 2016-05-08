@@ -33,8 +33,7 @@ echo '</div>';
 
 
 echo '<div class="center">';
-//echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%D5E0E8&amp;ctz=America%2FNew_York\" style= scrolling=\"no\"></iframe>";
-echo '<iframe class="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FNew_York" style=scrolling="no"></iframe>';
+echo '<iframe class="cal" src="https://calendar.google.com/calendar/embed?src=f2prj9o0uq3cju3sh9hs67mhik%40group.calendar.google.com&amp;bgcolor=%23FFFFFF&amp;ctz=America/New_York" style="scrolling="no"></iframe>';
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header">Upcoming Events</h3>';
