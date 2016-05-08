@@ -18,6 +18,7 @@ echo '<script type="text/javascript" src="event_homepage.js"></script>';
 echo '<link href="event_homepage.css" rel="stylesheet">';
 echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 echo '</head>';
+echo '<img class="logo" src="logo.png">';
 echo '<h1 class="header">REFUGE</h1	>';
 
 
