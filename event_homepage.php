@@ -16,27 +16,27 @@ echo '<head>';
 echo '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>';
 echo '<script type="text/javascript" src="event_homepage.js"></script>';
 echo '<link href="event_homepage.css" rel="stylesheet">';
+echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 echo '</head>';
 echo '<h1 class="header">REFUGE</h1	>';
-echo '<div class="sidebar">';     
 
-echo'<h3 class="events_header"><u> Tasks </u> </h3>';
 
-echo '<a href="pushnotification.html"><button class="task_content">Push Notification</button></a>';
-echo '<a href="event_creationpage.html"><button class="task_content">Create Event</button></a>';
-echo '<html xmlns="http://www.w3.org/1999/xhtml">';
+echo '<div class="taskLinks">';
 
+echo '<a href="event_creationpage.html"> Create Event</a>      <a href="pushnotification.html">Push Notification</a> ';
 
 echo '</div>';
+
 
 
 
 
 echo '<div class="center">';
-echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?src=f2prj9o0uq3cju3sh9hs67mhik%40group.calendar.google.com&ctz=America/New_York\" style= scrolling=\"no\"></iframe>";
+//echo "<iframe class=\"cal\" src=\"https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%D5E0E8&amp;ctz=America%2FNew_York\" style= scrolling=\"no\"></iframe>";
+echo '<iframe class="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FNew_York" style=scrolling="no"></iframe>';
 echo '</div>';
 echo '<div class="event_creator">';
-echo'<h3 class="events_header"><u> Upcoming Events </u> </h3>';
+echo'<h3 class="events_header">Upcoming Events</h3>';
 echo '<h5 class="events_subheader"> Click On Event To See More </h5>';
 
 
@@ -185,9 +185,9 @@ foreach ($events->getItems() as $event) {
 		*/
 		echo '<a class="eventButton" href="#">';
 		echo '<div class="event">';
-				echo '<h4><u>';
+				echo '<h4>';
 				echo $event->summary;
-				echo '</u></h4>';
+				echo '</h4>';
 				
 				echo '<div class="event_content">';
 				echo '<b>Where:</b>'.$event->location;
@@ -201,13 +201,12 @@ foreach ($events->getItems() as $event) {
 
 				echo '<b>When:</b>';
 				echo "<br>";
-				echo $startMatch[2]. ' ('. $startMatch[1]. ')';
+				echo '<b>Start:</b>'.$startMatch[2]. ' ('. $startMatch[1]. ')';
 
 
 				echo "<br>";
-				echo '-';
-				echo '<br>';
-				echo $endMatch[2]. ' ('. $endMatch[1]. ')';
+				
+				echo '<b>End:</b>'.$endMatch[2]. ' ('. $endMatch[1]. ')';
 
 				echo '<div class="eventInfo">';
 					
