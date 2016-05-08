@@ -25,3 +25,15 @@ body{
 .text_colors{
 	color:white;
 }
+
+.small {
+font-variant: small-caps;
+}
+
+.top-buffer {
+	margin-top:10px;
+}
+.require:after {
+  content:"*";
+  color:red;
+}
