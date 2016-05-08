@@ -21,7 +21,9 @@ a:-webkit-any-link{
 .logo{
 	background-size: 20%
 	vertical-align: center;
-	width:5%;
+	width:13%;
+	align-content: center;
+	margin-left: 44%;
 
 
 }
