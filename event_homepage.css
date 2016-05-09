@@ -33,11 +33,18 @@ a:-webkit-any-link{
 	width:13%;
 	align-content: center;
 	margin-left: 5%;
-	display: inline-block;
-	margin-right: 10%%;
-
-
+	display: inline-block;	
 }
+
+.logo_e{
+	background-size: 20%
+	vertical-align: none;
+	width:13%;
+	align-content: center;
+	display: inline-block;	
+}
+
+
 img{
 	vertical-align: middle;
 }
@@ -61,6 +68,25 @@ img{
 	vertical-align: middle;
 	display: inline-block;
 	margin-right: 24.5%;
+	margin-top: 10px;
+
+}
+
+.header_e{
+	margin-left: 22%;
+	font-weight: lighter;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 20%;
+	margin-top: 10px;
+}
+
+.header_p{
+	margin-left: 17%;
+	font-weight: lighter;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 20%;
 	margin-top: 10px;
 
 }

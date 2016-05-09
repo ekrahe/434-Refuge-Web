@@ -8,7 +8,10 @@
 
 
 
+		<link rel="stylesheet" type="text/css" href="event_homepage.css">
+
 		<link rel="stylesheet" type="text/css" href="Create_page/create_page.css" >
+
 		<!--Bootstrap DatePicker -->
 		<link rel="stylesheet" type="text/css" href="Create_page/date_picker.css" >
 		<!--script type="text/javascript" src="Create_page/bootstrap-datetimepicker .js"></script>
@@ -24,199 +27,201 @@
 			<!--Event Title-->
 			<div class="container">
 
-				<div class="align-left">
-					<a href="event_homepage.php"><img class="logo" src="Refuge_web_logo_full.png"></a>
-					<h4>Create New Event</h4>	
+				<a href="event_homepage.php"><img class="logo_e" src="Refuge_web_logo_full.png"></a>
+				<h1 class="header_e">Create Event</h1>
+				<div class="taskLinks">	<a href="event_creationpage.html" type="button" class="btn btn-primary buttons" style="margin-right:20px;"><span class="buttonText">Create Event</span></a>    
+					<a href="pushnotification.html" type="button" class="btn btn-primary buttons"><span class="buttonText">Push Notification</span></a> 
+
 				</div>
-				
+
 				<div class="size">
-				<form action="event_homepage.php" class="overall-border form_color" method="POST">
+					<form action="event_homepage.php" class="overall-border form_color" method="POST">
 
-					<!--Buttons-->
-					<div class="btn-group" role="group">
-						<a href="event_homepage.php" type="button" class=" btn btn-default  btn-circle" id="back"><i class="glyphicon glyphicon-chevron-left"></i></a>
-						<button type="submit" class="btn btn-primary" name="submit" onclick="return deleteCookie();" >SAVE</button>	
-						<button type="reset" class="btn btn-warning" id="cancel" >CLEAR</button>	
-					</div>
+						<!--Buttons-->
+						<div class="btn-group" role="group">
+							<a href="event_homepage.php" type="button" class=" btn btn-default  btn-circle" id="back"><i class="glyphicon glyphicon-chevron-left"></i></a>
+							<button type="submit" class="btn btn-primary" name="submit" onclick="return deleteCookie();" >SAVE</button>	
+							<button type="reset" class="btn btn-warning" id="cancel" >CLEAR</button>	
+						</div>
 
-					<!----Title---->
-					<fieldset class="form-group margin-top-20">
-						<legend for="title" class="require"><span class="small">Title</span></legend>
+						<!----Title---->
+						<fieldset class="form-group margin-top-20">
+							<legend for="title" class="require"><span class="small">Title</span></legend>
+							<div class="row">
+								<div class="col-md-6 col-md-offset-1">
+									<input type="text" class="form-control" id="title_id" name="title" autocomplete="off"> 
+								</div>
+							</div>                           
+						</fieldset> 
+
+
+
+						<!----Logistics---->
+
+						<fieldset class="form-group">
+
+							<legend class="require"><span class="small">Logistics</span></legend> 
+							<div class=" form-group row">				
+								<label for="start_date_id" class="control-label col-md-1"><span class="normal">Start:</span></label>
+
+								<div class="col-md-3"> 
+
+									<div class="input-group date" id="start_date_id" data-date="" data-date-format="MM dd yyyy">
+										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
+										</span> 
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
+										</span> 
+									</div>
+								</div>  
+
+								<div class="col-md-3">
+									<div class="input-group date" id="start_time_id" data-date="" data-date-format="hh:ii:P">
+										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="form-group row">
+								<label for="end_date_id" class="control-label col-md-1"><span class="normal">End:</span></label> 
+
+								<div class="col-md-3"> 
+
+									<div class="input-group date" id="end_date_id" data-date="" data-date-format="MM dd yyyy">
+										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
+										</span> 
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
+										</span> 
+									</div>
+								</div>  
+
+								<div class="col-md-3">
+									<div class="input-group date" id="end_time_id" data-date="" data-date-format="hh:ii">
+										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" >
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="loc" class="control-label col-md-1"><span class="normal">Location:</span></label> 
+
+								<div class="col-md-3">
+									<textarea type="button" class="form-control" name="location" rows="1" cols="5" id="loc"></textarea> 
+								</div>
+
+								<div class="col-md-3">
+									<a href="googlemap.html" type="button" class="btn btn-info" id="map" onclick="return makecookie();">Map</a> 
+								</div>
+							</div>
+
+						</fieldset>
+
+
 						<div class="row">
-						<div class="col-md-6 col-md-offset-1">
-						<input type="text" class="form-control" id="title_id" name="title" autocomplete="off"> 
-						</div>
-						</div>                           
-					</fieldset> 
 
+							<!----Description---->
+							<fieldset class = "form-group col-md-4">  
+								<legend  class="require"><span class="small">Description</span></legend>
+								<textarea class="form-control" rows="6" name="description"  id="description_id"></textarea>
+							</fieldset> 
 
+							<!----Documents---->
+							<fieldset class="form-group col-md-3">
+								<legend class="require"><span class="small">Documents</span></legend>
 
-					<!----Logistics---->
-
-					<fieldset class="form-group">
-
-						<legend class="require"><span class="small">Logistics</span></legend> 
-						<div class=" form-group row">				
-							<label for="start_date_id" class="control-label col-md-1"><span class="normal">Start:</span></label>
-
-							<div class="col-md-3"> 
-							
-								<div class="input-group date" id="start_date_id" data-date="" data-date-format="MM dd yyyy">
-									<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
-									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
-									</span> 
-									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
-									</span> 
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="Birth Certificate" name="documents[]" id="birth_certificate"> Birth Certificate
+									</label>
 								</div>
-							</div>  
 
-							<div class="col-md-3">
-								<div class="input-group date" id="start_time_id" data-date="" data-date-format="hh:ii:P">
-									<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM">
-									<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								<div class="checkbox">                                
+									<label>
+										<input type="checkbox" value="Passport" name="documents[]" id="passport_id"> Passport
+									</label>
 								</div>
-							</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="Marriage License" name="documents[]" id="m_id"> Marriage License
+									</label>
+								</div>
+
+								<div class="checkbox ">
+									<label>
+										<input type="checkbox" value="Residency Card" name="documents[]" id="residency_id"> Residency Card
+									</label>
+								</div>
+
+								<div class="checkbox ">
+									<label>
+										<input type="checkbox" value="Health Records" name="documents[]" id="health_id"> Health Records
+									</label>
+								</div>
+
+							</fieldset> 
+
+
+
+
+							<!--Aid Tags---->
+							<fieldset class="form-group col-md-4">
+								<legend><span class="small">Aid Tags</span></legend>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="Food" name="aid[]" id="food_id"> Food
+									</label>
+								</div>
+
+								<div class="checkbox">                                
+									<label>
+										<input type="checkbox" value="Water" name="aid[]" id="water_id"> Water
+									</label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="Healthcare" name="aid[]" id="healthcare_id"> Healthcare
+									</label>
+								</div>
+
+								<div class="checkbox ">
+									<label>
+										<input type="checkbox" value="Shelter" name="aid[]" id="shelter_id"> Shelter
+									</label>
+								</div>
+
+								<div class="checkbox ">
+									<label>
+										<input type="checkbox" value="Employment" name="aid[]" id="employment_id"> Employment
+									</label>
+								</div>
+
+
+								<div class="checkbox ">
+									<label>
+										<input type="checkbox" value="Clothes" name="aid[]" id="clothes_id"> Clothes
+									</label>
+								</div>
+
+							</fieldset> 
+
+
 						</div>
 
 
-						<div class="form-group row">
-							<label for="end_date_id" class="control-label col-md-1"><span class="normal">End:</span></label> 
+					</form>
+				</div>
 
-							<div class="col-md-3"> 
-							
-								<div class="input-group date" id="end_date_id" data-date="" data-date-format="MM dd yyyy">
-									<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
-									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
-									</span> 
-									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
-									</span> 
-								</div>
-							</div>  
-
-							<div class="col-md-3">
-								<div class="input-group date" id="end_time_id" data-date="" data-date-format="hh:ii">
-									<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" >
-									<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-									<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group row">
-							<label for="loc" class="control-label col-md-1"><span class="normal">Location:</span></label> 
-
-							<div class="col-md-3">
-								<textarea type="button" class="form-control" name="location" rows="1" cols="5" id="loc"></textarea> 
-							</div>
-
-							<div class="col-md-3">
-								<a href="googlemap.html" type="button" class="btn btn-info" id="map" onclick="return makecookie();">Map</a> 
-							</div>
-						</div>
-
-					</fieldset>
-
-
-					<div class="row">
-
-						<!----Description---->
-						<fieldset class = "form-group col-md-4">  
-							<legend  class="require"><span class="small">Description</span></legend>
-							<textarea class="form-control" rows="6" name="description"  id="description_id"></textarea>
-						</fieldset> 
-
-						<!----Documents---->
-						<fieldset class="form-group col-md-3">
-							<legend class="require"><span class="small">Documents</span></legend>
-
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="Birth Certificate" name="documents[]" id="birth_certificate"> Birth Certificate
-								</label>
-							</div>
-
-							<div class="checkbox">                                
-								<label>
-									<input type="checkbox" value="Passport" name="documents[]" id="passport_id"> Passport
-								</label>
-							</div>
-
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="Marriage License" name="documents[]" id="m_id"> Marriage License
-								</label>
-							</div>
-
-							<div class="checkbox ">
-								<label>
-									<input type="checkbox" value="Residency Card" name="documents[]" id="residency_id"> Residency Card
-								</label>
-							</div>
-
-							<div class="checkbox ">
-								<label>
-									<input type="checkbox" value="Health Records" name="documents[]" id="health_id"> Health Records
-								</label>
-							</div>
-
-						</fieldset> 
-
-
-
-
-						<!--Aid Tags---->
-						<fieldset class="form-group col-md-4">
-							<legend><span class="small">Aid Tags</span></legend>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="Food" name="aid[]" id="food_id"> Food
-								</label>
-							</div>
-
-							<div class="checkbox">                                
-								<label>
-									<input type="checkbox" value="Water" name="aid[]" id="water_id"> Water
-								</label>
-							</div>
-
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="Healthcare" name="aid[]" id="healthcare_id"> Healthcare
-								</label>
-							</div>
-
-							<div class="checkbox ">
-								<label>
-									<input type="checkbox" value="Shelter" name="aid[]" id="shelter_id"> Shelter
-								</label>
-							</div>
-
-							<div class="checkbox ">
-								<label>
-									<input type="checkbox" value="Employment" name="aid[]" id="employment_id"> Employment
-								</label>
-							</div>
-
-
-							<div class="checkbox ">
-								<label>
-									<input type="checkbox" value="Clothes" name="aid[]" id="clothes_id"> Clothes
-								</label>
-							</div>
-
-						</fieldset> 
-
-
-					</div>
-
-
-				</form>
 			</div>
 
 		</div>
-
-  </div>
 		<!--Logistis -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -251,8 +256,8 @@
 					forceParse: 0,
 					showMeridian:true
 				});
-				
-				
+
+
 				$('#end_date_id').datetimepicker( {
 					weekStart: 1,
 					todayBtn:  1,
