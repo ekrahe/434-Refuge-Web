@@ -23,8 +23,16 @@ a:-webkit-any-link{
 	vertical-align: center;
 	width:13%;
 	align-content: center;
-	margin-left: 44%;
+	margin-left: 15px;
+	display: inline-block;
+	margin-right: 65.5%;
+
 }
+.buttons{
+	margin-top: 10px;
+
+}
+
 
 
 
@@ -36,13 +44,15 @@ a:-webkit-any-link{
 
 }
 .taskLinks{
-	vertical-align: center;
-	text-align: center;
-	margin-bottom: 20px;
+	display: inline-block;
+	/*vertical-align: center;
+	text-align: center;*/
+	padding-top: 10px;
+	/*margin-left: 65.5%;*/
 }
 .taskLinks a{
-	color: #0000EE;
-	text-decoration: underline;
+	color: white;
+	text-decoration: none;
 }
 
 

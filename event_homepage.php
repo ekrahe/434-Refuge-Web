@@ -26,8 +26,8 @@ echo '<img class="logo" src="Refuge_web_logo_full.png">';
 
 echo '<div class="taskLinks">';
 
-echo '<a href="event_creationpage.html" type="button" class="btn btn-primary" style="margin-right:20px;"> Create Event</a>    
-<a href="pushnotification.html" type="button" class="btn btn-primary">Push Notification</a> ';
+echo '<a href="event_creationpage.html" type="button" class="btn btn-primary buttons" style="margin-right:20px;"> Create Event</a>    
+<a href="pushnotification.html" type="button" class="btn btn-primary buttons">Push Notification</a> ';
 
 echo '</div>';
 
