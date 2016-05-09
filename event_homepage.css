@@ -25,12 +25,16 @@ a:-webkit-any-link{
 	align-content: center;
 	margin-left: 15px;
 	display: inline-block;
-	margin-right: 65.5%;
+	margin-right: 64.3%;
 
 }
 .buttons{
-	margin-top: 25px;
+	margin-top: 20px;
+	display: inline-block;
 
+}
+.buttonText{
+	font-size: 80%;
 }
 
 

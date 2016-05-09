@@ -26,8 +26,8 @@ echo '<a href="event_homepage.php"><img class="logo" src="Refuge_web_logo_full.p
 
 echo '<div class="taskLinks">';
 
-echo '<a href="event_creationpage.html" type="button" class="btn btn-primary buttons" style="margin-right:20px;"> Create Event</a>    
-<a href="pushnotification.html" type="button" class="btn btn-primary buttons">Push Notification</a> ';
+echo '<a href="event_creationpage.html" type="button" class="btn btn-primary buttons" style="margin-right:20px;"><span class="buttonText">Create Event</span></a>    
+<a href="pushnotification.html" type="button" class="btn btn-primary buttons"><span class="buttonText">Push Notification</span></a> ';
 
 echo '</div>';
 
