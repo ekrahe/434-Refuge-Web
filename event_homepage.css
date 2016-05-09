@@ -29,14 +29,19 @@ a:-webkit-any-link{
 
 .logo{
 	background-size: 20%
-	vertical-align: center;
+	vertical-align: none;
 	width:13%;
 	align-content: center;
 	margin-left: 5%;
 	display: inline-block;
-	margin-right: 58%;
+	margin-right: 10%%;
+
 
 }
+img{
+	vertical-align: middle;
+}
+
 .buttons{
 	margin-top: 20px;
 	margin-left: 5px;
@@ -51,10 +56,12 @@ a:-webkit-any-link{
 
 
 .header{
-	margin-left: 45%;
+	margin-left: 25%;
 	font-weight: lighter;
-	vertical-align: center;
-
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 24.5%;
+	margin-top: 10px;
 
 }
 .taskLinks{

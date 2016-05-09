@@ -21,7 +21,9 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 
 echo '</head>';
 echo '<a href="event_homepage.php"><img class="logo" src="Refuge_web_logo_full.png"></a>';
-//echo '<h1 class="header">REFUGE</h1	>';
+echo '<h1 class="header">Home</h1>';
+
+
 
 
 echo '<div class="taskLinks">';
