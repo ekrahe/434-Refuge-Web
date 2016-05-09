@@ -93,9 +93,9 @@ a:-webkit-any-link{
 	height:87%;
 
 }
-.event h4{
+.event_content h4{
 	margin:0;
-	font-size: 100%;
+	font-size: 150%;
 
 
 }
@@ -107,7 +107,7 @@ a:-webkit-any-link{
 	border-style: solid;
 	border-color: #333;
 	border-width: 1px;
-	text-align: center;
+	
 }
 .event_content{
 	font-size: 80%;

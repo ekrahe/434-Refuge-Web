@@ -40,7 +40,7 @@ echo '<iframe class="cal" src="https://calendar.google.com/calendar/embed?src=f2
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header">Upcoming Events</h3>';
-echo '<h6 class="events_subheader"> Click On Event To See More </h6>';
+
 
 
 
@@ -188,11 +188,12 @@ foreach ($events->getItems() as $event) {
 		*/
 		echo '<a class="eventButton" href="#">';
 		echo '<div class="event">';
+		echo '<div class="event_content">';
 				echo '<h4>';
-				echo $event->summary;
+				echo '<u>'.$event->summary.'</u>';
 				echo '</h4>';
 				
-				echo '<div class="event_content">';
+				
 				echo '<b>Where:</b>'.$event->location;
 				echo "<br>";
 
