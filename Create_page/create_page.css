@@ -54,4 +54,7 @@ font-weight: normal;
 	align-content: center;
 }
 
-
+.btn-warning{
+	background-color:#D99C3C;
+	border-color: #CC9338;
+}
