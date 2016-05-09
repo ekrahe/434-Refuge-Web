@@ -23,13 +23,14 @@ a:-webkit-any-link{
 	vertical-align: center;
 	width:13%;
 	align-content: center;
-	margin-left: 15px;
+	margin-left: 5%;
 	display: inline-block;
-	margin-right: 64.3%;
+	margin-right: 58%;
 
 }
 .buttons{
 	margin-top: 20px;
+	margin-left: 5px;
 	display: inline-block;
 
 }
@@ -61,10 +62,10 @@ a:-webkit-any-link{
 
 
 .cal{
-	margin-left: 0.75%;
+	margin-left: 5%;
 	/*margin-right:20%;*/
 	position: fixed;
-	width: 	76%; /*55%*/
+	width: 	70%; /*55%*/
 	height: 89.35%; /*90%*/
 	border-color: #333;
    border-style: solid;
@@ -74,7 +75,7 @@ a:-webkit-any-link{
 }
 
 .event_creator{
-	margin-left: 78.0%; 
+	margin-left: 76.0%; 
 
 	position: fixed;
 	width: 20%;
