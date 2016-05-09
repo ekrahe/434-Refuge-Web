@@ -24,9 +24,9 @@ a:-webkit-any-link{
 	width:13%;
 	align-content: center;
 	margin-left: 44%;
-
-
 }
+
+
 
 .header{
 	margin-left: 45%;
@@ -81,7 +81,7 @@ a:-webkit-any-link{
 }
 .events_subheader{
 	font-weight: normal;
-	font-size: 100%;
+	font-size: 13px;
 	text-align: center;
 	margin-bottom:10px; 
 	margin-top: 0; 

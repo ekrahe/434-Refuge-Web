@@ -25,8 +25,11 @@
 			<div class="container">
 
 				<div class="text-center">
-					<h1><span class="text_colors">REFUGE</span></h1>				
+					<img class="logo" src="Refuge_web_logo_full.png">
+					<h4>Create New Event</h4>	
 				</div>
+				
+				<div class="size">
 				<form action="event_homepage.php" class="overall-border form_color" method="POST">
 
 					<!--Buttons-->
@@ -54,7 +57,7 @@
 
 						<legend class="require"><span class="small">Logistics</span></legend> 
 						<div class=" form-group row">				
-							<label for="start_date_id" class="control-label col-md-1">Start:</label>
+							<label for="start_date_id" class="control-label col-md-1"><span class="normal">Start:</span></label>
 
 							<div class="col-md-3"> 
 							
@@ -78,7 +81,7 @@
 
 
 						<div class="form-group row">
-							<label for="end_date_id" class="control-label col-md-1">End:</label> 
+							<label for="end_date_id" class="control-label col-md-1"><span class="normal">End:</span></label> 
 
 							<div class="col-md-3"> 
 							
@@ -101,7 +104,7 @@
 						</div>
 
 						<div class="form-group row">
-							<label for="loc" class="control-label col-md-1">Location:</label> 
+							<label for="loc" class="control-label col-md-1"><span class="normal">Location:</span></label> 
 
 							<div class="col-md-3">
 								<textarea type="button" class="form-control" name="location" rows="1" cols="5" id="loc"></textarea> 
@@ -125,7 +128,7 @@
 
 						<!----Documents---->
 						<fieldset class="form-group col-md-3">
-							<legend><span class="small">Documents</span></legend>
+							<legend class="require"><span class="small">Documents</span></legend>
 
 							<div class="checkbox">
 								<label>
@@ -213,7 +216,7 @@
 
 		</div>
 
-
+  </div>
 		<!--Logistis -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -452,7 +455,7 @@
 			var m_location = localStorage.getItem("st_location");
 			if(m_location !== null) {
 				document.getElementById("loc").value=m_location;
-				m_location = null;
+				localStorage.removeItem("st_location");
 			}else {
 
 				document.getElementById("loc").value="";

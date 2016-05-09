@@ -13,10 +13,12 @@ define('SCOPES', implode(' ', array(
 
 echo '<!DOCTYPE html>';
 echo '<head>';
+echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">';
 echo '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>';
 echo '<script type="text/javascript" src="event_homepage.js"></script>';
 echo '<link href="event_homepage.css" rel="stylesheet">';
 echo '<html xmlns="http://www.w3.org/1999/xhtml">';
+
 echo '</head>';
 echo '<img class="logo" src="Refuge_web_logo_full.png">';
 //echo '<h1 class="header">REFUGE</h1	>';
@@ -24,7 +26,8 @@ echo '<img class="logo" src="Refuge_web_logo_full.png">';
 
 echo '<div class="taskLinks">';
 
-echo '<a href="event_creationpage.html"> Create Event</a>      <a href="pushnotification.html">Push Notification</a> ';
+echo '<a href="event_creationpage.html" type="button" class="btn btn-primary" style="margin-right:20px;"> Create Event</a>    
+<a href="pushnotification.html" type="button" class="btn btn-primary">Push Notification</a> ';
 
 echo '</div>';
 
@@ -37,7 +40,7 @@ echo '<iframe class="cal" src="https://calendar.google.com/calendar/embed?src=f2
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header">Upcoming Events</h3>';
-echo '<h5 class="events_subheader"> Click On Event To See More </h5>';
+echo '<h6 class="events_subheader"> Click On Event To See More </h6>';
 
 
 
