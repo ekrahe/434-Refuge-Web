@@ -38,6 +38,8 @@ a:-webkit-any-link{
 
 
 }
+
+
 img{
 	vertical-align: middle;
 }
@@ -61,6 +63,26 @@ img{
 	vertical-align: middle;
 	display: inline-block;
 	margin-right: 24.5%;
+	margin-top: 10px;
+
+}
+
+.header_e{
+	margin-left: 20%;
+	font-weight: lighter;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 13%;
+	margin-top: 10px;
+
+}
+
+.header_e{
+	margin-left: 12%;
+	font-weight: lighter;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 13%;
 	margin-top: 10px;
 
 }
