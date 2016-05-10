@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
 	//im 1280, large screen is 1600 moses has 1920
 	var width = $(window).width(), height = $(window).height();
 	console.log("width", width, "hegiht", height);
-	if(width==1920){
+	if(width>=1900){
 		 $('.header').css('margin-right', '30%');
 	}
 	if(width>=1600){
