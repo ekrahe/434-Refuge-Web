@@ -63,8 +63,6 @@ img{
 }
 
 
-
-
 .header{
 	margin-left: 25%;
 	font-weight: lighter;
@@ -100,8 +98,9 @@ img{
 	/*vertical-align: center;
 	text-align: center;*/
 	padding-top: 30px;
-	float:right;
-	margin-right: 6%;
+
+	margin-right: 15px;
+	margin-left:55px;
 	/*margin-left: 65.5%;*/
 }
 
