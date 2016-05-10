@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
 	if(width>=1900){
 		 $('.header').css('margin-right', '30%');
 	}
-	if(width>=1600){
+	else if(width>=1600){
 		  $('.header').css('margin-right', '28%');
 	}else if(width>1000 && width<1600){
 		console.log("got to right block");
