@@ -59,9 +59,8 @@ img{
 }
 .buttonText{
 	font-size: 80%;
+	color:white;
 }
-
-
 
 
 .header{
@@ -113,7 +112,6 @@ img{
 	text-align: center;*/
 	padding-top: 10px;
 	margin-right: 6%;
-	margin-left:5%;
 }
 
 .taskLinks a{
