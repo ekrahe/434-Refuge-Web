@@ -37,6 +37,7 @@ a:-webkit-any-link{
 }
 
 .logo_e{
+	margin-left: 7.5%;
 	background-size: 20%
 	vertical-align: none;
 	width:13%;
@@ -74,11 +75,11 @@ img{
 }
 
 .header_e{
-	margin-left: 22%;
+	margin-left: 20%;
 	font-weight: lighter;
 	vertical-align: middle;
 	display: inline-block;
-	margin-right: 20%;
+	margin-right: 14.5%;
 	margin-top: 10px;
 }
 
@@ -87,7 +88,7 @@ img{
 	font-weight: lighter;
 	vertical-align: middle;
 	display: inline-block;
-	margin-right: 20%;
+	margin-right: 12.5%;
 	margin-top: 10px;
 
 }
@@ -102,6 +103,16 @@ img{
 	margin-right: 6%;
 	/*margin-left: 65.5%;*/
 }
+
+.taskLinks_e{
+
+	display: inline-block;
+	/*vertical-align: center;
+	text-align: center;*/
+	padding-top: 10px;
+	margin-right: 6%;
+}
+
 .taskLinks a{
 	color: white;
 	text-decoration: none;
