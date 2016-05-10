@@ -54,6 +54,7 @@ img{
 	margin-left: 5px;
 	display: inline-block;
 
+
 }
 .buttonText{
 	font-size: 80%;
@@ -92,10 +93,13 @@ img{
 }
 
 .taskLinks{
+
 	display: inline-block;
 	/*vertical-align: center;
 	text-align: center;*/
-	padding-top: 10px;
+	padding-top: 30px;
+	float:right;
+	margin-right: 6%;
 	/*margin-left: 65.5%;*/
 }
 .taskLinks a{

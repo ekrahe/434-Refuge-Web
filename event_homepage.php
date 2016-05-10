@@ -200,13 +200,6 @@ foreach ($events->getItems() as $event) {
 				echo "<br>";
 
 
-
-
-			
-
-
-				echo '<b>When:</b>';
-				echo "<br>";
 				echo '<b>Start:</b>'.$startMatch[2]. ' ('. $startMatch[1]. ')';
 
 
