@@ -72,7 +72,7 @@
 								<div class="col-md-3"> 
 
 									<div class="input-group date" id="start_date_id" data-date="" data-date-format="MM dd yyyy">
-										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
+										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY" id="start_date_id_s">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
 										</span> 
 										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
@@ -82,7 +82,7 @@
 
 								<div class="col-md-3">
 									<div class="input-group date" id="start_time_id" data-date="" data-date-format="hh:ii:P">
-										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM">
+										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" id="start_time_id_s">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 									</div>
@@ -96,7 +96,7 @@
 								<div class="col-md-3"> 
 
 									<div class="input-group date" id="end_date_id" data-date="" data-date-format="MM dd yyyy">
-										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY">
+										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY" id="end_date_id_e">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
 										</span> 
 										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
@@ -106,7 +106,7 @@
 
 								<div class="col-md-3">
 									<div class="input-group date" id="end_time_id" data-date="" data-date-format="hh:ii:P">
-										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" >
+										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" id="end_time_id_e" >
 										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 									</div>
@@ -325,10 +325,10 @@
 			function makecookie(){
 
 				setCookie("TITLE",document.getElementById("title_id").value);
-				setCookie("START_DATE", document.getElementById("start_date_id").value);				
-				setCookie("START_TIME", document.getElementById("start_time_id").value);
-				setCookie("END_DATE", document.getElementById("end_date_id").value);
-				setCookie("END_TIME", document.getElementById("end_time_id").value);				
+				setCookie("START_DATE", document.getElementById("start_date_id_s").value);				
+				setCookie("START_TIME", document.getElementById("start_time_id_s").value);
+				setCookie("END_DATE", document.getElementById("end_date_id_e").value);
+				setCookie("END_TIME", document.getElementById("end_time_id_e").value);				
 				setCookie("DESCRIBE", document.getElementById("description_id").value);
 
 				if(document.getElementById("birth_certificate").checked) {
@@ -382,23 +382,23 @@
 			}
 
 			if( field2 = getCookie("START_DATE")) {				
-				document.getElementById("start_date_id").value= field2;
+				document.getElementById("start_date_id_s").value= field2;
 			}
 
 			if( field3 = getCookie("START_TIME")) {
 				//alert("New 1"+field3);
-				document.getElementById("start_time_id").value= field3;
+				document.getElementById("start_time_id_s").value= field3;
 			}
 
 			if( field4 = getCookie("END_DATE")) {
 				//alert('1');
-				document.getElementById("end_date_id").value= field4;
+				document.getElementById("end_date_id_e").value= field4;
 			}		
 
 
 			if( field5 = getCookie("END_TIME")) {
 				//alert('2');
-				document.getElementById("end_time_id").value= field5;
+				document.getElementById("end_time_id_e").value= field5;
 			}
 
 			if( field6 = getCookie("DESCRIBE")) {
