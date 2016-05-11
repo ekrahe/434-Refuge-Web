@@ -1,1 +1,8 @@
-test
+#CMSC434 Refuge_Web_Application
+Clone the repository/Download the zip file.
+Uzip the file into a folder of your liking.
+
+The event _creation.html and pushnotification.html were developed with the use of bootstrap framework for more responsives.
+
+Google Maps API: https://developers.google.com/maps/
+Stackoverflow was used in the intergration of the google maps api on the googlemap.html page.
