@@ -48,3 +48,9 @@ The icon is our own but the project took many web searches to get where it is.
   *  dateTime formatting stuff
 * http://stackoverflow.com/questions/4989410/php-compare-datetime-values 
   * dateTime comparison for filtering events
+* http://stackoverflow.com/questions/10593013/delete-cookie-by-name
+  * Delete cookie by name.
+* http://www.malot.fr/bootstrap-datetimepicker/
+  * DateTime Picker
+* http://getbootstrap.com/css/
+  * Used to style the create and pushnotification pages.
