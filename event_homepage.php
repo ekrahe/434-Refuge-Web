@@ -23,9 +23,6 @@ echo '</head>';
 echo '<a href="event_homepage.php"><img class="logo" src="Refuge_web_logo_full.png"></a>';
 echo '<h1 class="header">Home</h1>';
 
-
-
-
 echo '<div class="taskLinks">';
 
 echo '<a href="event_creationpage.html" type="button" class="btn btn-primary buttons" style="margin-right:20px;"><span class="buttonText">Create Event</span></a>    
@@ -42,7 +39,6 @@ echo '<iframe class="cal" src="https://calendar.google.com/calendar/embed?src=f2
 echo '</div>';
 echo '<div class="event_creator">';
 echo'<h3 class="events_header">Upcoming Events</h3>';
-
 
 
 
@@ -70,6 +66,8 @@ if(isset($_POST['submit'])) {
 	$description = htmlspecialchars($_POST['description']);
 	$documents =$_POST['documents'];	
 	$aid = $_POST['aid'];
+	
+	  
 	
 
 	$descript = $description."\r\n";
