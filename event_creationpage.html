@@ -71,7 +71,7 @@
 
 								<div class="col-md-3"> 
 
-									<div class="input-group date" id="start_date_id" data-date="" data-date-format="MM dd yyyy">
+									<div class="input-group date" id="start_date_id" data-date="" data-date-format="yyyy-mm-dd">
 										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY" id="start_date_id_s">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
 										</span> 
@@ -81,8 +81,8 @@
 								</div>  
 
 								<div class="col-md-3">
-									<div class="input-group date" id="start_time_id" data-date="" data-date-format="hh:ii:P">
-										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" id="start_time_id_s">
+									<div class="input-group date" id="start_time_id" data-date="" data-date-format="hh:ii">
+										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN" id="start_time_id_s">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 									</div>
@@ -95,8 +95,8 @@
 
 								<div class="col-md-3"> 
 
-									<div class="input-group date" id="end_date_id" data-date="" data-date-format="MM dd yyyy">
-										<input type="text" class="form-control" name="start_date" placeholder="MM/dd/YYYY" id="end_date_id_e">
+									<div class="input-group date" id="end_date_id" data-date="" data-date-format="yyyy-mm-dd">
+										<input type="text" class="form-control" name="end_date" placeholder="MM/dd/YYYY" id="end_date_id_e">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>	
 										</span> 
 										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>	
@@ -105,8 +105,8 @@
 								</div>  
 
 								<div class="col-md-3">
-									<div class="input-group date" id="end_time_id" data-date="" data-date-format="hh:ii:P">
-										<input type="text" class="form-control" name="start_time"  placeholder="HR:MIN AM/PM" id="end_time_id_e" >
+									<div class="input-group date" id="end_time_id" data-date="" data-date-format="hh:ii">
+										<input type="text" class="form-control" name="end_time"  placeholder="HR:MIN" id="end_time_id_e" >
 										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
 										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 									</div>
@@ -258,8 +258,8 @@
 					startView: 1,
 					minView: 0,
 					maxView: 1,
-					forceParse: 0,
-					showMeridian:true
+					forceParse: 0
+					//showMeridian:true
 				});
 
 
@@ -282,8 +282,8 @@
 					startView: 1,
 					minView: 0,
 					maxView: 1,
-					forceParse: 0,
-					showMeridian:true
+					forceParse: 0
+					//showMeridian:true
 				});
 				//alert('Hi');
 
