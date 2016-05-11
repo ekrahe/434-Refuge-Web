@@ -15,7 +15,7 @@ The icon is our own but the project took many web searches to get where it is.
 * https://developers.google.com/google-apps/calendar/v3/reference/calendarList/get
   * Google Calendar API reference 
 * https://developers.google.com/identity/protocols/OAuth2
-  * user authentification guide
+  * User authentification guide
 * https://console.developers.google.com/apis/library?project=refuge434-1282&authuser=2
   * Google API Manager and Authentification key manager
 * https://developers.google.com/api-client-library/php/auth/web-app#overview
