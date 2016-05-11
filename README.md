@@ -54,3 +54,7 @@ The icon is our own but the project took many web searches to get where it is.
   * DateTime Picker
 * http://getbootstrap.com/css/
   * Used to style the create and pushnotification pages.
+* http://www.the-art-of-web.com/javascript/setcookie
+  * used for saving form values using cookies
+* http://www.w3schools.com/HTML/html5_webstorage.asp
+  * used for saving form values using the browser
