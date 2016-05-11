@@ -44,7 +44,7 @@
 				var response= xhr.responseText;	
 				var object = JSON.parse(response);
 				var location_name = object.results[2].formatted_address;
-				localStorage.setItem("st_location",location_name);
+				localStorage.setItem("p_location",location_name);
 
 				//Set the marker
 				if(!(marker&&infowindow)) {
@@ -96,7 +96,7 @@
 			//alert("ME");
             
 			function remove() {
-				localStorage.removeItem("st_location");				
+				localStorage.removeItem("p_location");				
 			}
 			var oncancel = document.getElementById("cancelled");
 			oncancel.addEventListener('click',remove);

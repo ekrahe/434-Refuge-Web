@@ -48,9 +48,9 @@
 							<!----Location---->
 
 							<div class="form-group">				
-								<label for="loc" class="control-label col-md-2 require"><span class="normal">Location:</span></label>				
+								<label for="ploc" class="control-label col-md-2 require"><span class="normal">Location:</span></label>				
 								<div class="col-md-7">	
-									<input type="text" class="form-control" id="loc" name="location" autocomplete="off">	
+									<input type="text" class="form-control" id="ploc" name="location" autocomplete="off">	
 								</div>
 								<div class="col-md-3">
 									<a href="googlemap2.html" type="button" class="btn btn-info" id="map" onclick="return makecookie();"><span style="color:white;">Map</span></a> 
@@ -242,13 +242,13 @@
 		<script>
 
 			//Location stuff
-			var m_location = localStorage.getItem("st_location");
+			var m_location = localStorage.getItem("p_location");
 			if(m_location !== null) {
-				document.getElementById("loc").value=m_location;
+				document.getElementById("ploc").value=m_location;
 				m_location = null;
 			}else {
 
-				document.getElementById("loc").value="";
+				document.getElementById("ploc").value="";
 			}			
 		</script>
 
