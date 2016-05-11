@@ -21,9 +21,9 @@ The icon is our own but the project took many web searches to get where it is.
 * https://developers.google.com/api-client-library/php/auth/web-app#overview
   * Google authentification user guide
 * http://enarion.net/programming/php/google-client-api/google-client-api-php/
-  * help guide to setting up Google API with PHP
+  * Help guide to setting up Google API with PHP
 * http://stackoverflow.com/questions/15857077/change-css-class-height-and-width-in-javascript-depending-on-screen-res 
-  * adjusting css based on screen resolution through Javascript 
+  * Adjusting css based on screen resolution through Javascript 
 * http://stackoverflow.com/questions/6267765/remove-underline-with-jquery 
   * CSS formatting via JQuery 
 * https://color.adobe.com/
@@ -33,28 +33,28 @@ The icon is our own but the project took many web searches to get where it is.
 * http://stackoverflow.com/questions/10451445/two-div-blocks-on-same-line
   *  CSS help to format buttons on same line
 * http://www.w3schools.com/html/html_images.asp 
-  *  how to add images to html, used for logo
+  *  How to add images to html, used for logo
 * http://stackoverflow.com/questions/4774022/whats-default-html-css-link-color
-  * for overwriting link color and formatting 
+  * For overwriting link color and formatting 
 * http://php.net/manual/en/function.preg-match.php 
-  * used for regex parsing 
+  * Used for regex parsing 
 * http://php.net/manual/en/function.strip-tags.php
-  * used for string formatting on reciept from API call
+  * Used for string formatting on reciept from API call
 * http://stackoverflow.com/questions/15408691/how-to-remove-last-comma-from-string-using-php
-  * substring info used for formatting string on API call
+  * Substring info used for formatting string on API call
 * http://stackoverflow.com/questions/13731800/send-php-variable-to-javascript-function
-  * passing php variable to javascript
+  * Passing php variable to javascript
 * http://php.net/manual/en/datetime.diff.php 
-  *  dateTime formatting stuff
+  * DateTime formatting information
 * http://stackoverflow.com/questions/4989410/php-compare-datetime-values 
-  * dateTime comparison for filtering events
+  * DateTime comparison for filtering events
 * http://stackoverflow.com/questions/10593013/delete-cookie-by-name
-  * Delete cookie by name.
+  * Delete cookie by name
 * http://www.malot.fr/bootstrap-datetimepicker/
   * DateTime Picker
 * http://getbootstrap.com/css/
   * Used to style the css create and pushnotification pages.
 * http://www.the-art-of-web.com/javascript/setcookie
-  * used for saving form values using cookies
+  * Used for saving form values using cookies
 * http://www.w3schools.com/HTML/html5_webstorage.asp
-  * used for saving form values using the browser
+  * Used for saving form values using the browser
