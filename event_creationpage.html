@@ -316,7 +316,7 @@
 				var cookies = document.cookie.split(";");
 				for(var i =0;i<cookies.length;i++){
 					var spck = cookies[i].split("=");
-					document.cookie=spck[0]+ "=" +null+ "; path=/; expires=" + expiry.toGMTString();
+					document.cookie=spck[0]+ "=; path=/; expires=" + expiry.toGMTString();
 				}
 				return true;
 			}
