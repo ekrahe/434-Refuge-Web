@@ -25,6 +25,8 @@ jQuery(document).ready(function($){
 	}else if(width>1000 && width<1600){
 		console.log("got to right block");
 		$('.header').css('margin-right', '24.25%');
+	}else{
+		$('.header').css('margin-right', '22.5%');
 	}
 
 
