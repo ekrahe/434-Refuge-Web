@@ -1,8 +1,7 @@
 #434-Refuge-Web
 ##Overview
 Refuge is a mobile and web service created to address problems of the European Migrant Crisis.
-Our web application has been built to service NGOs, and allows them to create events, view them on a calendar, and send push notifications to refugees.
-Those actions service the mobile application, which is used by refugees to search for aid in their area by entering a term and being presented with a list of created events.
+Our web application has been built to service NGOs, and allows them to create events, view them on a calendar, and send push notifications to refugees.The events and push notifications from the web platoform provide the content for the mobile application, which is used by refugees to search for aid in their area by entering a term and being presented with a list of created events.
 The website is temporarily accessible at 54.172.72.146/event_homepage.php.
 The code for the mobile application can be found at https://github.com/ekrahe/434-Refuge-Mobile
 
