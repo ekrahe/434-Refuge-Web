@@ -11,6 +11,7 @@ define('SCOPES', implode(' ', array(
 	Google_Service_Calendar::CALENDAR)
 						));
 
+//web page stuff
 echo '<!DOCTYPE html>';
 echo '<head>';
 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">';
@@ -45,15 +46,18 @@ echo'<h3 class="events_header">Upcoming Events</h3>';
 
 
 
-////////////////////////
+////////////////////////SETUP CONNECTION TO GOOGLE API
 
-$client = getClient();
+$client = getClient(); //see below 
 
 
 $service= new Google_Service_Calendar($client);
 
-//////////Moses's added code
-//This only occurs when save button is clicked
+//////////
+
+
+//This code only runs occurs when save button is clicked on create_event page
+
 
 if(isset($_POST['submit'])) {
 	
@@ -119,7 +123,7 @@ if(isset($_POST['submit'])) {
 	
 	  
    
-	//printf('Event created: %s\n', $event->htmlLink);
+	
 
 }
 
@@ -127,21 +131,25 @@ if(isset($_POST['submit'])) {
 
 
 
-//////////////////////////AKIVA"S CODE
+//////////////////////////
 
 echo '<div class="events">';
 
+//setup formatting for GET call to Google API
 $optParams = array(
   'orderBy' => 'startTime',
   'singleEvents' => TRUE,
 );
 
-
+//Get the events from the Calendar
 $events = $service->events->listEvents('f2prj9o0uq3cju3sh9hs67mhik@group.calendar.google.com', $optParams); //long string is calandarID
+
 
 date_default_timezone_set('America/Los_Angeles');
 $date = new DateTime('now');
 $date-> format ("Y-m-d\TH:i:sP");
+
+//iterate over events and format to display 
 foreach ($events->getItems() as $event) {
 	//only display future events 
 	if((new DateTime($event->getStart()->dateTime))->getTimestamp()-$date->getTimestamp() > 0){
@@ -153,7 +161,7 @@ foreach ($events->getItems() as $event) {
 		
 
 		/*the IF block below is to get event description, documents and aid. Since not all three are 
-			always going to be provided, each permutation is accounted for
+			always going to be provided, each permutation is accounted for in creating the regex
 		*/
 
 		if(strpos($event->description, 'DOCUMENTS') && strpos($event->description, 'AID')){
@@ -166,9 +174,11 @@ foreach ($events->getItems() as $event) {
 			$eventDescriptionPattern='/(.*)/';
 		}	
 
+
 		$eventDescription=trim(preg_replace("/\r\n/",  ' ' , $event->description));
 
 
+		//regex on event object to get values
 		preg_match($dateTimePattern, $event->getStart()->dateTime, $startMatch);
 		preg_match($dateTimePattern, $event->getEnd()->dateTime, $endMatch);
 		preg_match($eventDescriptionPattern, $eventDescription, $descriptionMatch);
@@ -177,15 +187,7 @@ foreach ($events->getItems() as $event) {
 	
 
 	
-		//''.$startMatch[1].','.$startMatch[2].','.$endMatch[1].','.$endMatch[2].''
-
-		//echo '<div class="event" onclick="seeDetails('. htmlspecialchars($jscode)  .')" >';
-		/*
-				echo '<div class="event" onclick="seeDetails(\''. $startMatch[1]  .'\', \''. $startMatch[2]  
-					.'\', \''. $endMatch[1]  .'\', \''. $endMatch[2]  .'\', \''. $event->location.'\', \''
-					. $descriptionMatch[1]  .'\', \'' . substr($descriptionMatch[2],0,-2)  .'\' , \'' . substr($descriptionMatch[3],0,-1)  .'\')" >';
-
-		*/
+		//build event to be outputted to sidebar on page, class IDs are linked to javascript
 		echo '<a class="eventButton" href="#">';
 		echo '<div class="event">';
 		echo '<div class="event_content">';
@@ -205,6 +207,8 @@ foreach ($events->getItems() as $event) {
 				
 				echo '<b>End:</b>'.$endMatch[2]. ' ('. $endMatch[1]. ')';
 
+
+				//section only displays when event is clicked on 
 				echo '<div class="eventInfo">';
 					
 					echo ' <a href="#" class="closeButton"></a>';
@@ -243,14 +247,12 @@ echo '</div>';
 
 
 
-//echo '<a href="event_creationpage.html"><button class="create_event">Create Event</button></a>';
+
 echo '</div>';
 
 
+//code to get link to google API
 function getClient() {
-	//client ID: 438774563994-g1dcqfjr0ok77qmhjb7375b3dfg4ngdo.apps.googleusercontent.com
-	//client secret: P93nCmxfsy-okUJ_Kz7q-LG5
-
 
 	$client = new Google_Client();
 	$client->setApplicationName(APPLICATION_NAME);
@@ -268,14 +270,7 @@ function getClient() {
 		$accessToken = file_get_contents($credentialsPath);
 	} else {
 		// Request authorization from the user.
-		//$authUrl = $client->createAuthUrl();
-		//printf("Open the following link in your browser:\n%s\n", $authUrl);
-		//print 'Enter verification code: ';
-		//$authCode = trim(fgets(STDIN));
-
 		// Exchange authorization code for an access token.
-		//$accessToken = $client->authenticate('4/2LVocn1mAVoJH-24BWH0nk8_d5_J0d8K79RlZjzLozg');
-		//$accessToken='4/2LVocn1mAVoJH-24BWH0nk8_d5_J0d8K79RlZjzLozg';
 		// Store the credentials to disk.
 		$accessToken = $client->authenticate('4/2LVocn1mAVoJH-24BWH0nk8_d5_J0d8K79RlZjzLozg'); //JSON token
 
@@ -294,6 +289,8 @@ function getClient() {
 	}
 	return $client;
 }
+
+//used in building file paths
 function expandHomeDirectory($path) {
 	$homeDirectory = getenv('HOME');
 	if (empty($homeDirectory)) {
